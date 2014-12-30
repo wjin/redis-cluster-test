@@ -8,8 +8,7 @@ do
 	kill -9 $pid > /dev/null 2>&1
 done
 
-find . -name "*.aof" | xargs rm > /dev/null 2>&1
-find . -name "*.rdb" | xargs rm > /dev/null 2>&1
-find . -name "nodes.conf" | xargs rm > /dev/null 2>&1
+DIRS=`ls -l | grep ^d | awk '{ print $9 }'`
+rm -rf $DIRS
 
 exit 0
