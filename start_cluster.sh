@@ -20,6 +20,6 @@ do
 	IP_PORT_PAIR="$IP_PORT_PAIR $IP:$i"
 done
 
-$TRIB create --replicas $SLAVE_PER_MASTER $IP_PORT_PAIR
+yes yes | $TRIB create --replicas $SLAVE_PER_MASTER $IP_PORT_PAIR
 
 exit 0
